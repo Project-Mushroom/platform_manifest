@@ -131,6 +131,22 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 
 ## 开始编译！！
 
+* 可选
+
+使用 ccache 可以加快再次编译速度哦！为什么不试试嘛
+
+但此操作需要你拥有足够的硬盘空间哟～
+
+当然，它也不会立刻见效啦、、
+
+```shell
+echo "export USE_CCACHE=1" >> ~/.bashrc
+echo "export CCACHE_COMPRESS=1" >> ~/.bashrc
+source ~/.bashrc
+# 同时，你可以使用 ccache -M [size] 来限制 ccache 存储对象的大小，例如：
+#ccache -M 50G
+```
+
 ```shell
 # 初始化编译环境
 . build/envsetup.sh
