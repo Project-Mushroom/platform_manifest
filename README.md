@@ -70,6 +70,7 @@ git config --global url.https://github.com.cnpmjs.org/.insteadof https://github.
 ------------------
 
 虽然说、、直接在根目录同步源码也没什么问题。。但是真的不会觉得乱吗？
+
 所以最好是，新建一个文件夹来放源码哦！
 
 ```shell
@@ -90,13 +91,13 @@ cd ~/miku
 使用以下命令来初始化仓库：
 
 ```shell
-$    repo init -u https://github.com/Project-Mushroom/platform_manifest -b snow
+repo init -u https://github.com/Project-Mushroom/platform_manifest -b snow
 ```
 
 开始同步源码：
 
 ```shell
-$    repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
 > `-j` 参数为下载线程数，不带该参数默认自动分配线程
 >
@@ -120,7 +121,9 @@ $    repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 >
 > 请尽量不要发布 Ify 后过的 Device Configuration，如果一定要发布的话，请注明 Device Configuration 的原作者！
 >
-> 同时也请尽量不要发布你使用Ify的 Device Configuration 编译出的Miku UI到各种论坛，因为Ify过后的 Device Configuration 通常不能与MikuUI契合，从而导致各种各样的问题！
+> 同时也请尽量不要发布你使用 Ify 的 Device Configuration 编译出的 Miku UI 到各种论坛，
+> 
+> 因为 Ify 过后的 Device Configuration 通常不能与 Miku UI 契合，从而导致各种各样的问题！
 
 准备好了这些以后，让我们开始...
 
