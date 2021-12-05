@@ -62,6 +62,8 @@ sudo chmod a+x /bin/repo
 ```shell
 git config --global url.https://mirrors.bfsu.edu.cn/git/AOSP/.insteadof https://android.googlesource.com
 git config --global url.https://github.com.cnpmjs.org/.insteadof https://github.com
+echo "export REPO_URL='https://mirrors.bfsu.edu.cn/git/git-repo'" >> ~/.bashrc
+source ~/.bashrc
 ```
 在终端执行以上命令，就可以不用魔法来愉快地同步源码啦！
 
